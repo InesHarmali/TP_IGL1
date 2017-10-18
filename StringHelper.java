@@ -104,4 +104,24 @@ public class StringHelper {
          }
         return texte;
     }
+    
+  static public String JoinTable(String tab[],String sper) {
+        String chaine = "";
+
+        for (int i = 0; i < tab.length; i++) {
+            chaine = chaine + tab[i] + sper;
+        }
+        return chaine;
+    }
+static public int NbOcc(String texte, String mot) {
+        String tableau[] = texte.split(" ");
+        int occ = 0;
+        for (int i = 0; i < tableau.length; i++) {
+            if (tableau[i] == mot) {
+                occ++;
+            }
+            i++;
+        }
+    }    
+    
 }
