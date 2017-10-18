@@ -122,6 +122,7 @@ static public int NbOcc(String texte, String mot) {
             }
             i++;
         }
+    return i;
     }    
     
 }
