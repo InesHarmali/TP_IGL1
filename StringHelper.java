@@ -1,7 +1,6 @@
   package tp_igl;
 import java.util.ArrayList;
-import java.util.ArrayList;
-import java.util.Arrays;
+
 /**
  * Cette class contient des fonctions qui s'appliquent aux chaines de caractére  
  * afin de pouvoir faciliter la taches de recherche et mise en forme et gestion des textes
@@ -59,9 +58,9 @@ public class StringHelper {
         return chaine;
     }
     
-    /**
-     * Cette fonction fractionne le texte en utilisant le separateur donné en parametre 
-     * en un tableau de chaine de caractére (en un tableau de mot)
+   /**
+     * Cette fonction fractionne le texte en utilisant le separateur donné en parametre
+     * en un tableau de chaine de caractére (en un tableau de mot) exemple :(en entrée on a texte:" la grande maison est blanche" & un séparateur donné exp : " " ,et en sortie un tableau de mots: ["la","grande","maison","est","blache"]
      * @param texte c'est le texte que vous voulez fractionner en chaine de caractere
      * @param separateur c'est le caractere qui sépare les chaines
      * @return cette fonction retourne un tableau de chaines de caractére (mots)
@@ -153,17 +152,15 @@ public class StringHelper {
         return occ;
        }
     } 
-    /**
-     *Cette fonction elimine tous les occurence des mots vide definis par[ou,et,à,non] dans un texte donné (String) 
-     * @param chaine c'est le texte dont vous voulez supprimer les mots vide
-     * @return cette fonction retourne un texte qui ne conteint pas les mots vide ou,et,à,non
-     */ 
    public static  String EliminationMotvide( String chaine) {
+
+
         String s =" ";
         char c= s.charAt(0);
         String mots[] = fractioner_string(chaine,c);
+    
         ArrayList list = new ArrayList(Arrays.asList(mots));
-               
+                
         int i =0;
        
         while (i< list.size()) {
@@ -174,9 +171,12 @@ public class StringHelper {
             i++;
 
         }
+
         String chaineF = "";
+
         for (int m = 0; m < list.size(); m++) {
             chaineF = chaineF + list.get(m)+" ";
+
         }
         return chaineF;
     }
