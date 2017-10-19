@@ -14,11 +14,11 @@ public class StringHelper {
      * 
      */
     public StringHelper(){}
-    /**
-     * Cette fonction applique une formule de cryptage sur un texte donné telle qu'elle
-     * remplace chaque lettre par la lettre suivante (exemple: a est remplacer par b.. etc)
-     * @param chaine c'est le texte dont vous voulez appliquer la formule
-     * @return cette fonction retourne un texte crypté  
+   /**
+     * cette fonction permet d'appliquer une fonction donnée à toute les lettres de la chaine de caractère donnée :
+     * remplace chaque lettre par la lettre suivante (exemple: chaine ="la maison " en sortie : chaine="mb nbjtpo" )
+     * @param chaine c'est le texte dont vous voulez appliquer la fonction
+     * @return cette fonction retourne un texte crypté
      */
     static public String formule_lettre_suivante(String chaine)
     {
@@ -61,7 +61,7 @@ public class StringHelper {
     
    /**
      * Cette fonction fractionne le texte en utilisant le separateur donné en parametre
-     * en un tableau de chaine de caractére (en un tableau de mot) exemple :(en entrée on a texte:" la grande maison est blanche" & un séparateur donné exp : " " ,et en sortie un tableau de mots: ["la","grande","maison","est","blache"]
+     * en un tableau de chaine de caractére (en un tableau de mot) exemple :(en entrée on a texte:" la grande maison est blanche" et un séparateur donné exp : " " ,et en sortie un tableau de mots: ["la","grande","maison","est","blanche"]
      * @param texte c'est le texte que vous voulez fractionner en chaine de caractere
      * @param separateur c'est le caractere qui sépare les chaines
      * @return cette fonction retourne un tableau de chaines de caractére (mots)
@@ -90,9 +90,9 @@ public class StringHelper {
       return tableau;
     }
 
-    /**
-     * Cette fonction corrige la forme du texte telle que la premiere lettre de 
-     * chaque phrase est en majuscule et le reste est en miniscule
+     /**
+     * Cette fonction corrige la forme du texte telle que la premiere lettre de
+     * chaque phrase est en majuscule et le reste est en miniscule exemple:( en entrée texte:" eCOLE NaTIOnal suPERieure.a wwad SmaR." en sortie : Ecole nationale supérieure.A vvad smar."
      * @param texte c'est le texte dont vous voulez appliquer la mise en forme
      * @return cette fonction retourne un texte mis en forme
      */
@@ -133,9 +133,9 @@ public class StringHelper {
         return texte;
     }
     
-    /**
-     * cette fonction permet de trouver le nombre d'apparition d'un mot dans le texte
-     * @param texte c'est la chaine de caractére qui contient le mot rechercher 
+     /**
+     * cette fonction permet de trouver le nombre d'apparition d'un mot dans le texte par exemple( le texte:" Ecole nationale supérieure d'informatique nationale nationale",le mot="nationale" ,en sortie nb occurence de "nationale" =3)
+     * @param texte c'est la chaine de caractére qui contient le mot rechercher
      * @param mot c'est la sous chaine dont vous avez besoin de nombre d'occurance
      * @return cette fonction retourne un entier indiquant le nombre d'apparition du mot
      * @throws Texte_vide_Exception si le texte inséré est vide cette exception est lancé
@@ -155,9 +155,9 @@ public class StringHelper {
     } 
   
   /**
-     *Cette fonction elimine tous les occurence des mots vide definis par[ou,et,à,non] dans un texte donné (String) 
-     * @param chaine c'est le texte dont vous voulez supprimer les mots vide
-     * @return cette fonction retourne un texte qui ne conteint pas les mots vide ou,et,à,non
+     * cette fonction permet d'éliminer les mots vides("ou","non",et","à" dans un texte donné exemple (texte:" Ecole ou nationale et supérieure non d'informatique à wad esmar" en sortie :" Ecole nationle supérieure d'informatique wad esmar"
+     * @param chaine c'est la chaine  de caractère dont on veut supprimer les mots vides qu'elle contient
+     * @return cette fonction returne une chaine de caractère sans les mots vides ("ou","non",et","à")
      */
    public static  String EliminationMotvide( String chaine) {
 
