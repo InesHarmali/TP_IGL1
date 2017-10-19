@@ -155,6 +155,23 @@ public class StringHelper {
     } 
   
   /**
+     * Cette fonction concatene tous les chaines de caractere (mots) contenues dans un tableau
+     * en utilisant un separateur pour former un seul texte(une seule chaine de caractere)
+     * @param tab c'est le tableau des mots a concatener
+     * @param sper c'est le caractere qui separe les mots du tableau
+     * @return 
+     * cette fonction retourne une chaine de caractere qui contient tous les mots du tableau
+     */
+    static public String Jointure_Table(String[] tab,String sper) {
+        String chaine = "";
+
+        for (int i = 0; i < tab.length; i++) {
+            chaine = chaine + tab[i] + sper;
+        }
+        return chaine;
+    }
+  
+  /**
      * cette fonction permet d'éliminer les mots vides("ou","non",et","à" dans un texte donné exemple (texte:" Ecole ou nationale et supérieure non d'informatique à wad esmar" en sortie :" Ecole nationle supérieure d'informatique wad esmar"
      * @param chaine c'est la chaine  de caractère dont on veut supprimer les mots vides qu'elle contient
      * @return cette fonction returne une chaine de caractère sans les mots vides ("ou","non",et","à")
