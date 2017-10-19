@@ -151,5 +151,35 @@ public class StringHelper {
         }
         return occ;
        }
-    }    
+    } 
+   public static  String EliminationMotvide( String chaine) {
+
+
+        String s =" ";
+        char c= s.charAt(0);
+        String mots[] = fractioner_string(chaine,c);
+    
+        ArrayList list = new ArrayList(Arrays.asList(mots));
+                
+        int i =0;
+       
+        while (i< list.size()) {
+            if(((String) list.get(i)).equals("ou") ||((String) list.get(i)).equals("et")||((String) list.get(i)).equals("à") ||((String) list.get(i)).equals("non") )
+            {
+               list.remove(i);
+            }else
+            i++;
+
+        }
+
+        String chaineF = "";
+
+        for (int m = 0; m < list.size(); m++) {
+            chaineF = chaineF + list.get(m)+" ";
+
+        }
+        return chaineF;
+    }
+  
+  
 }
