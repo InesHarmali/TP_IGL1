@@ -28,6 +28,7 @@ public class StringHelper {
         
          char[] tableau_char = chaine.toCharArray();
          chaine =""; int a;int ab;
+
          
          for(int i=0;i<tableau_char.length;i++)
          {
