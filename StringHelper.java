@@ -27,7 +27,7 @@ public class StringHelper {
         // sinon on le laisse 
         
          char[] tableau_char = chaine.toCharArray();
-         chaine =""; int a;int ab;
+         chaine =""; int a;int ab; string changement;
 
          
          for(int i=0;i<tableau_char.length;i++)
