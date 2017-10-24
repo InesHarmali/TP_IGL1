@@ -1,4 +1,4 @@
-  package tp_igl;
+package tp_igl;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -14,7 +14,7 @@ public class StringHelper {
      * 
      */
     public StringHelper(){}
-   /**
+    /**
      * cette fonction permet d'appliquer une fonction donnée à toute les lettres de la chaine de caractère donnée :
      * remplace chaque lettre par la lettre suivante (exemple: chaine ="la maison " en sortie : chaine="mb nbjtpo" )
      * @param chaine c'est le texte dont vous voulez appliquer la fonction
@@ -59,7 +59,7 @@ public class StringHelper {
         return chaine;
     }
     
-   /**
+    /**
      * Cette fonction fractionne le texte en utilisant le separateur donné en parametre
      * en un tableau de chaine de caractére (en un tableau de mot) exemple :(en entrée on a texte:" la grande maison est blanche" et un séparateur donné exp : " " ,et en sortie un tableau de mots: ["la","grande","maison","est","blanche"]
      * @param texte c'est le texte que vous voulez fractionner en chaine de caractere
@@ -90,9 +90,9 @@ public class StringHelper {
       return tableau;
     }
 
-     /**
+    /**
      * Cette fonction corrige la forme du texte telle que la premiere lettre de
-     * chaque phrase est en majuscule et le reste est en miniscule exemple:( en entrée texte:" eCOLE NaTIOnal suPERieure.a wwad SmaR." en sortie : Ecole nationale supérieure.A vvad smar."
+     * chaque phrase est en majuscule et le reste est en miniscule exemple:( en entrée texte:" eCOLE NaTIOnal suPERieure.a oUEd SmaR." en sortie : Ecole nationale supérieure.A oued smar."
      * @param texte c'est le texte dont vous voulez appliquer la mise en forme
      * @return cette fonction retourne un texte mis en forme
      */
@@ -133,7 +133,7 @@ public class StringHelper {
         return texte;
     }
     
-     /**
+    /**
      * cette fonction permet de trouver le nombre d'apparition d'un mot dans le texte par exemple( le texte:" Ecole nationale supérieure d'informatique nationale nationale",le mot="nationale" ,en sortie nb occurence de "nationale" =3)
      * @param texte c'est la chaine de caractére qui contient le mot rechercher
      * @param mot c'est la sous chaine dont vous avez besoin de nombre d'occurance
@@ -153,8 +153,8 @@ public class StringHelper {
         return occ;
        }
     } 
-  
-  /**
+    
+    /**
      * Cette fonction concatene tous les chaines de caractere (mots) contenues dans un tableau
      * en utilisant un separateur pour former un seul texte(une seule chaine de caractere)
      * @param tab c'est le tableau des mots a concatener
@@ -170,15 +170,15 @@ public class StringHelper {
         }
         return chaine;
     }
-  
-  /**
-     * cette fonction permet d'éliminer les mots vides("ou","non",et","à" dans un texte donné exemple (texte:" Ecole ou nationale et supérieure non d'informatique à wad esmar" en sortie :" Ecole nationle supérieure d'informatique wad esmar"
+    
+    /**
+     *cette fonction permet d'éliminer les mots vides("ou","non",et","à" dans un texte donné exemple (texte:" Ecole ou nationale et supérieure non d'informatique à wad esmar" en sortie :" Ecole nationle supérieure d'informatique wad esmar"
      * @param chaine c'est la chaine  de caractère dont on veut supprimer les mots vides qu'elle contient
      * @return cette fonction returne une chaine de caractère sans les mots vides ("ou","non",et","à")
-     */
-   public static  String EliminationMotvide( String chaine) {
+     */ 
+    public static  String EliminationMotvide( String chaine) {
 
-        String s =" ";  int k;
+        String s =" "; int a;
         char c= s.charAt(0);
         String mots[] = fractioner_string(chaine,c);
     
@@ -192,14 +192,12 @@ public class StringHelper {
                list.remove(i);
             }else
             i++;
-
         }
         String chaineF = "";
         for (int m = 0; m < list.size(); m++) {
             chaineF = chaineF + list.get(m)+" ";
+
         }
         return chaineF;
     }
-  
-  
 }
