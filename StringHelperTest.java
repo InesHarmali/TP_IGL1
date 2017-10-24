@@ -37,18 +37,16 @@ public class StringHelperTest {
     public void tearDown() {
     }
 
-    /**
+  /**
      * Test of formule_lettre_suivante method, of class StringHelper.
      */
     @Test
     public void testFormule_lettre_suivante() {
         System.out.println("formule_lettre_suivante");
-        String chaine = "";
-        String expResult = "";
+        String chaine = " la maison - ABCXYZ";
+        String expResult = " mb nbjtpo - BCDYZA";
         String result = StringHelper.formule_lettre_suivante(chaine);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -57,13 +55,11 @@ public class StringHelperTest {
     @Test
     public void testFractioner_string() {
         System.out.println("fractioner_string");
-        String texte = "";
+        String texte = "  Building tree for all the packages and classes.";
         char separateur = ' ';
-        String[] expResult = null;
+        String[] expResult = {"Building","tree","for","all","the","packages","and","classes."};
         String[] result = StringHelper.fractioner_string(texte, separateur);
         assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -72,27 +68,62 @@ public class StringHelperTest {
     @Test
     public void testMise_en_forme_texte() {
         System.out.println("mise_en_forme_texte");
-        String texte = "";
-        String expResult = "";
+        String texte = " loaDING THE filES . USE giTHUB";
+        String expResult = " Loading the files . Use github";
         String result = StringHelper.mise_en_forme_texte(texte);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
-     * Test of occurence_mot method, of class StringHelper.
+     * Test of Nombre_Occurence method, of class StringHelper.
      */
     @Test
-    public void testOccurence_mot() {
-        System.out.println("occurence_mot");
-        String Texte = "";
-        String mot = "";
-        int expResult = 0;
-        int result = StringHelper.occurence_mot(Texte, mot);
+    public void testNombre_Occurence() throws Exception {
+        System.out.println("Nombre_Occurence");
+        String texte = "The test case test case tesst test";
+        String mot = "test";
+        int expResult = 3;
+        int result = StringHelper.Nombre_Occurence(texte, mot);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+    
+    /**
+     * Test of Nombre_Occurence method, of class StringHelper.
+     * @throws java.lang.Exception
+     */
+    @Test (expected=Texte_vide_Exception.class)
+    public void test1Nombre_Occurence() throws Exception {
+        System.out.println("Nombre_Occurence");
+        String texte = "";
+        String mot = "test";
+        StringHelper.Nombre_Occurence(texte, mot);
+    }
+    
+    
+
+    /**
+     * Test of Jointure_Table method, of class StringHelper.
+     */
+    @Test
+    public void testJointure_Table() {
+        System.out.println("Jointure_Table");
+        String[] tab ={"la","grande","maison","est","blanche"};
+        String sper = "-";
+        String expResult = "la-grande-maison-est-blanche-";
+        String result = StringHelper.Jointure_Table(tab, sper);
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of EliminationMotvide method, of class StringHelper.
+     */
+    @Test
+    public void testEliminationMotvide() {
+        System.out.println("EliminationMotvide");
+        String chaine = "Ecole et nationale non superieure ou et ou d'informatique";
+        String expResult = "Ecole nationale superieure d'informatique ";
+        String result = StringHelper.EliminationMotvide(chaine);
+        assertEquals(expResult, result);
     }
     
 }
