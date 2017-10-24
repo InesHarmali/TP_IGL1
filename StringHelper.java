@@ -178,7 +178,7 @@ public class StringHelper {
      */
    public static  String EliminationMotvide( String chaine) {
 
-        String s =" "; int a;int b;
+        String s =" "; 
         char c= s.charAt(0);
         String mots[] = fractioner_string(chaine,c);
     
